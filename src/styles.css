@@ -1,0 +1,147 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+    --fuenteHeading: 'Encode Sans', sans-serif;
+    --fuenteParrafo: 'Open Sans', sans-serif;
+    --blanco: #ffffff;  
+    --oscuro: #212121;
+    --primario: #ffc107;    
+    --secundario: #0097a7;
+    --gris: #757575;
+    --grisClaro: #DFE9F3;
+}
+
+/* Globales */
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,*:before, *:after {
+    box-sizing: inherit;
+}
+
+body {    
+    font-size: 1.6rem;
+    background-image: linear-gradient(to top, var(--grisClaro) 0%, var(--blanco) 100%);
+    
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    margin: 0;
+}
+
+
+.contenedor {
+    max-width: 130rem;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.sombra{
+    box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+}
+
+
+h2 {
+    font-size: 4rem;
+}
+
+h3 {
+    font-size: 3.2rem;
+}
+
+
+/* Modal */
+.modal-bg {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0; 
+    transition: visibility 0s, opacity 0.5s; 
+}
+
+.bg-activo {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal {
+    background-color: white;
+    width: 50%;
+    height: 30%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column; 
+}
+
+.iconos {
+    display: flex;
+    justify-content: right;
+    gap: 1rem;    
+}
+
+/*Header */
+
+/*     */
+/* .acerca-de {
+    display: flex;
+    flex-direction: column;
+} */
+
+.nom-seccion {
+    margin: 0;
+}
+
+.barra-edit {
+    /* position: relative; */
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1.5px solid black;
+}
+
+.acerca-de-contenido {
+    border-bottom: 1.5px solid black;
+    position: relative; 
+}
+
+.acerca-de-texto {
+    margin-top: 2rem;
+}
+
+.botones-seccion {
+    position: absolute;
+    
+    top: 0;
+    right: 0;
+    margin-top: -2rem;
+}
+
+
+footer {
+    background-color: #00358e;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
