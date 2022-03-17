@@ -11,6 +11,7 @@ import { PersonaService } from './persona.service';
 })
 export class AcercaDeComponent implements OnInit {
   public personas: Persona[] = [];
+  public editPersona!: Persona;
 
   constructor (private personaService: PersonaService){}
 
@@ -29,5 +30,31 @@ export class AcercaDeComponent implements OnInit {
     );
   }
   
+public onUpdatePersona(persona: Persona):void {
+  this.personaService.updatePersona(persona).subscribe(
+    (response:Persona) => {
+      console.log();
+      this.getPersonas();
+    },
+    (error: HttpErrorResponse) => {
+      alert(error.message);
+    }
+
+  );
+}
+
+  public onOpenModal(persona: Persona, mode: string): void {
+    const container = document.getElementById('main-container');
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.style.display= 'none';
+    button.setAttribute('data-toggle', 'modal');
+    if(mode === 'edit') {
+      this.editPersona = persona;
+      button.setAttribute('data-target', '#updatePersonaModal');
+    }
+    container?.appendChild(button);
+    button.click();
+  }
 
 }

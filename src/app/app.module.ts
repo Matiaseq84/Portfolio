@@ -10,6 +10,7 @@ import { HabilidadesComponent } from './habilidades/habilidades.component';
 import { LogrosComponent } from './logros/logros.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PersonaService } from './acerca-de/persona.service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { PersonaService } from './acerca-de/persona.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule 
+    HttpClientModule,
+    FormsModule 
   ],
 
   providers: [PersonaService],
