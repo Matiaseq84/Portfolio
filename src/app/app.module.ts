@@ -11,6 +11,7 @@ import { LogrosComponent } from './logros/logros.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PersonaService } from './acerca-de/persona.service';
 import { FormsModule } from '@angular/forms';
+import { ExperienciaComponent } from './experiencia/experiencia.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { FormsModule } from '@angular/forms';
     AcercaDeComponent,
     EstudiosComponent,
     HabilidadesComponent,
-    LogrosComponent
+    LogrosComponent,
+    ExperienciaComponent
   ],
   imports: [
     BrowserModule,
