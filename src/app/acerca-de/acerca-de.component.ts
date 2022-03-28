@@ -1,5 +1,6 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { TokenService } from '../seguridad/service/token.service';
 import { Persona } from './persona';
 
 import { PersonaService } from './persona.service';
@@ -10,13 +11,16 @@ import { PersonaService } from './persona.service';
   styleUrls: ['./acerca-de.component.css']
 })
 export class AcercaDeComponent implements OnInit {
+
+  isLogged = false;
   public personas: Persona[] = [];
   public editPersona!: Persona;
 
   constructor (private personaService: PersonaService){}
 
   ngOnInit() {
-      this.getPersonas();
+    this.getPersonas();
+    
   }
 
   public getPersonas(): void {
@@ -25,7 +29,8 @@ export class AcercaDeComponent implements OnInit {
           this.personas = response;
       },
       (error: HttpErrorResponse) => {
-        alert(error.message);
+        //alert(error.message);
+        console.log(error.message);
       }
     );
   }

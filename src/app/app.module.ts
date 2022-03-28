@@ -12,6 +12,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { PersonaService } from './acerca-de/persona.service';
 import { FormsModule } from '@angular/forms';
 import { ExperienciaComponent } from './experiencia/experiencia.component';
+import { interceptProvider } from './seguridad/interceptors/port-interceptor.service';
+
+import { LoginComponent } from './seguridad/auth/login.component';
+import { RegistroComponent } from './seguridad/auth/registro.component';
+import { MenuComponent } from './seguridad/menu/menu.component';
+import { IndexComponent } from './seguridad/index/index.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -21,16 +30,21 @@ import { ExperienciaComponent } from './experiencia/experiencia.component';
     EstudiosComponent,
     HabilidadesComponent,
     LogrosComponent,
-    ExperienciaComponent
+    ExperienciaComponent,
+    LoginComponent,
+    RegistroComponent,
+    MenuComponent,
+    IndexComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule 
+    FormsModule,
+    
   ],
 
-  providers: [PersonaService],
+  providers: [interceptProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
