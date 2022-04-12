@@ -6,7 +6,7 @@ import { IndexComponent } from './seguridad/index/index.component';
 
 const routes: Routes = [
   {path: '', component: IndexComponent},
-  {path:'login', component: LoginComponent},
+  //{path:'login', component: LoginComponent},
   {path: 'registro', component: RegistroComponent},
   {path: '**', redirectTo: '', pathMatch: 'full'}
 ];

@@ -53,6 +53,7 @@ export class ExperienciaComponent implements OnInit {
       (response:ExperienciaLaboral) => {
         console.log();
         this.getExperiencias();
+        
       },
       (error: HttpErrorResponse) => {
         alert(error.message);

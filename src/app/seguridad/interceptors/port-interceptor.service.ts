@@ -20,4 +20,4 @@ export class PortInterceptorService implements HttpInterceptor{
   }
 }
 
-export const interceptProvider = [{provide: HTTP_INTERCEPTORS, useClass: PortInterceptorService, multi: true}];
+export const InterceptProvider = [{provide: HTTP_INTERCEPTORS, useClass: PortInterceptorService, multi: true}];

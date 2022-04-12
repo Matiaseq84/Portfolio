@@ -1,7 +1,10 @@
 <app-menu></app-menu>
 
-<div *ngIf="isLogged; else loggedOut">
-    <app-encabezado></app-encabezado>
+ <!-- <div *ngIf="isLogged; else loggedOut"> -->
+ <div *ngIf="isLogged">
+    
+     <!-- <app-encabezado></app-encabezado>  -->
+     <!-- <app-menu></app-menu>  -->
   <app-acerca-de></app-acerca-de>
   <app-experiencia></app-experiencia>
   <app-estudios></app-estudios>
@@ -34,8 +37,8 @@
 </a>
 </footer>
 </div>
-<ng-template #loggedOut>Iniciá sesión, desconocido del orto</ng-template>
-
+<!-- <ng-template #loggedOut>Iniciá sesión</ng-template> -->
+ 
  
 
   

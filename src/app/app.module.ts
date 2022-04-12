@@ -12,14 +12,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { PersonaService } from './acerca-de/persona.service';
 import { FormsModule } from '@angular/forms';
 import { ExperienciaComponent } from './experiencia/experiencia.component';
-import { interceptProvider } from './seguridad/interceptors/port-interceptor.service';
+import { InterceptProvider } from './seguridad/interceptors/port-interceptor.service';
+
 
 import { LoginComponent } from './seguridad/auth/login.component';
 import { RegistroComponent } from './seguridad/auth/registro.component';
 import { MenuComponent } from './seguridad/menu/menu.component';
 import { IndexComponent } from './seguridad/index/index.component';
-
-
 
 
 @NgModule({
@@ -44,7 +43,7 @@ import { IndexComponent } from './seguridad/index/index.component';
     
   ],
 
-  providers: [interceptProvider],
+  providers: [InterceptProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
