@@ -1,6 +1,7 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { TokenService } from '../seguridad/service/token.service';
 import { Proyecto } from './logros';
 import { LogrosService } from './logros.service';
 
@@ -14,12 +15,21 @@ export class LogrosComponent implements OnInit {
   public proyectos: Proyecto[] = [];
   public editProyecto!: Proyecto;
   public deleteProyecto!: Proyecto;
+  isAdmin = false;
+  roles: string[];
+  authority: string;
   
 
-  constructor(private proyectoService: LogrosService) { }
+  constructor(private proyectoService: LogrosService, private tokenService: TokenService) { }
 
   ngOnInit() {
     this.getProyectos();
+    this.roles = this.tokenService.getAuthorities();
+    this.roles.forEach( rol => {
+      if(rol === 'ROLE_ADMIN') {
+        this.isAdmin = true;
+      }
+    });
   }
 
   public getProyectos(): void {

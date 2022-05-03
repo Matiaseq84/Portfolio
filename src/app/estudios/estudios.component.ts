@@ -1,8 +1,10 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { TokenService } from '../seguridad/service/token.service';
 import { Educacion } from './estudios';
 import { EstudiosService } from './estudios.service';
+
 
 @Component({
   selector: 'app-estudios',
@@ -13,18 +15,29 @@ export class EstudiosComponent implements OnInit {
   public estudios: Educacion[] = [];
   public editEducacion!: Educacion;
   public deleteEducacion!: Educacion;
-  
+  isAdmin = false;
+  roles: string[];
+  authority: string;
 
-  constructor(private estudiosService: EstudiosService) { }
+
+  constructor(private estudiosService: EstudiosService, private tokenService: TokenService) { }
 
   ngOnInit() {
     this.getEstudios();
+    this.roles = this.tokenService.getAuthorities();
+    this.roles.forEach( rol => {
+      if(rol === 'ROLE_ADMIN') {
+        this.isAdmin = true;
+      }
+    });
+
   }
 
   public getEstudios(): void {
     this.estudiosService.getEstudios().subscribe(
       (response: Educacion[]) => {
           this.estudios = response;
+          console.log(this.estudios)
       },
       (error: HttpErrorResponse) => {
         alert(error.message);

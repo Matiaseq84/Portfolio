@@ -1,6 +1,7 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { TokenService } from '../seguridad/service/token.service';
 import { HSSkill } from './habilidades';
 import { HabilidadesService } from './habilidades.service';
 
@@ -14,12 +15,21 @@ export class HabilidadesComponent implements OnInit {
   public skills: HSSkill[] = [];
   public editSkill!: HSSkill;
   public deleteSkill!: HSSkill;
+  isAdmin = false;
+  roles: string[];
+  authority: string;
   
 
-  constructor(private skillService: HabilidadesService) { }
+  constructor(private skillService: HabilidadesService, private tokenService: TokenService) { }
 
   ngOnInit() {
     this.getSkills();
+    this.roles = this.tokenService.getAuthorities();
+    this.roles.forEach( rol => {
+      if(rol === 'ROLE_ADMIN') {
+        this.isAdmin = true;
+      }
+    });
   }
 
   public getSkills(): void {

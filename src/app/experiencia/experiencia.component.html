@@ -1,6 +1,6 @@
 
 
-<div class="tab-pane show active" id="exp-container">
+<!-- <div class="tab-pane show active" id="exp-container">
     <button type="button" (click)="onOpenModal(null!,'add')">Agregar exp</button>
 
 
@@ -20,10 +20,47 @@
         </li>
         
     </ul>
+</div> -->
 
+<div id="exp-container">
+  <h2 class="skills">Experiencia <button (click)="onOpenModal(null!,'add')" type="button" class="botones_contenido" *ngIf="isAdmin">
+    <i class="fa-solid fa-plus"></i></button></h2>
+    <div class="header-bar"></div>
+  <div class="main-timeline" id="experiencia" >
     
-    
-</div>
+                          <!-- start experience section-->
+                          <div class="timeline" *ngFor="let exp of experiencias">
+                            <span id="eliminar-editar-estudios" *ngIf="isAdmin">                        
+                              <button type="button" class="botones_contenido" (click)="onOpenModal(exp,'edit')">
+                                  <i class="fa-solid fa-pen"></i>
+                              </button>
+                              <button (click)="onOpenModal(exp,'delete')" type="button" class="botones_contenido">
+                                  <i class="fa-solid fa-eraser"></i>   
+                              </button>
+                          </span>
+                              <div class="icon"></div>
+                              <div class="date-content">
+                                  <div class="date-outer">
+                                      <span class="date">
+                                              <span class="month">2 Years</span>
+                                      <span class="year">{{exp.fechaInicio}}</span>
+                                      </span>
+                                      
+                                  </div>
+                              </div>
+                              <div class="timeline-content">
+                                  <h5 class="title">{{exp.puesto}}</h5>
+                                  <p class="description">
+                                       {{exp.descripcion}}
+                                  </p>
+                              </div>
+                          </div>
+                          <!-- end experience section-->
+  
+                          
+  
+                      </div>
+  </div>
 
 <!-- Modal Experiencia Agregar -->
 <div class="modal fade" id="addExperienciaModal" tabindex="-1" aria-labelledby="addExperienciaModal" aria-hidden="true">
@@ -130,7 +167,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="deleteModalLabel">Eliminar Experiencia</h5>
-          <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden= "true">&times; </span>    
           </button>
         </div>
@@ -138,7 +175,7 @@
           <p>¿Estás seguro de eliminar experiencia?</p>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
           <button (click)="onDeleteExperiencia(deleteExperiencia!.id)" type="button" class="btn btn-danger" data-dismiss="modal">Si</button>
         </div>
       </div>

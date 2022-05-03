@@ -13,13 +13,22 @@ import { PersonaService } from './persona.service';
 export class AcercaDeComponent implements OnInit {
 
   isLogged = false;
+  isAdmin = false;
   public personas: Persona[] = [];
   public editPersona!: Persona;
+  roles: string[];
+  authority: string;
 
-  constructor (private personaService: PersonaService){}
+  constructor (private personaService: PersonaService, private tokenService: TokenService){}
 
   ngOnInit() {
     this.getPersonas();
+    this.roles = this.tokenService.getAuthorities();
+    this.roles.forEach( rol => {
+      if(rol === 'ROLE_ADMIN') {
+        this.isAdmin = true;
+      }
+    });
     
   }
 

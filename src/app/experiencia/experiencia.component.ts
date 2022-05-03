@@ -1,6 +1,7 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { TokenService } from '../seguridad/service/token.service';
 import { ExperienciaLaboral } from './experiencia';
 import { ExperienciaService } from './experiencia.service';
 
@@ -13,12 +14,22 @@ export class ExperienciaComponent implements OnInit {
   public experiencias: ExperienciaLaboral[] = [];
   public editExperiencia!: ExperienciaLaboral;
   public deleteExperiencia!: ExperienciaLaboral;
+  isAdmin = false;
+  roles: string[];
+  authority: string;
   
 
-  constructor(private experienciaService: ExperienciaService) { }
+  constructor(private experienciaService: ExperienciaService, private tokenService: TokenService) { }
 
   ngOnInit() {
     this.getExperiencias();
+    this.roles = this.tokenService.getAuthorities();
+    this.roles.forEach( rol => {
+      if(rol === 'ROLE_ADMIN') {
+        this.isAdmin = true;
+      }
+    });
+    
   }
 
   public getExperiencias(): void {

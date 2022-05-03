@@ -1,89 +1,14 @@
-<!-- 
+<!--  
 <div *ngFor="let persona of personas">
 <div>{{persona.nombre}}</div>
-</div>
-
-<div class="contenedor acerca-de sombra">
-    <header class="barra-edit">
-        <h2 class="nom-seccion">Sobre mi</h2>
-                               
-    </header>   
-    <div class="acerca-de-contenido">
-        <p id="texto-acerca" class="acerca-de-texto">TEXTO 1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, nostrum. Magnam suscipit consectetur nemo voluptate ea neque commodi iusto nam a. Dolorem, ducimus.</p>
-        <div class="botones-seccion">
-            <svg mlns="http://www.w3.org/2000/svg" class="boton-edit-info" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                <path d="M9 7h-3a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-3" />
-                <path d="M9 15h3l8.5 -8.5a1.5 1.5 0 0 0 -3 -3l-8.5 8.5v3" />
-                <line x1="16" y1="5" x2="19" y2="8" />
-            </svg>
-           
-            <svg xmlns="http://www.w3.org/2000/svg" class="boton-eliminar-info" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                <rect x="4" y="4" width="16" height="16" rx="2" />
-                <path d="M10 10l4 4m0 -4l-4 4" />
-            </svg>
-        </div>
-    </div>
-    
-    <div class="acerca-de-contenido">
-        <p class="acerca-de-texto">TEXTO 2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, nostrum. Magnam suscipit consectetur nemo voluptate ea neque commodi iusto nam a. Dolorem, ducimus.</p>
-        <div class="botones-seccion">
-            <svg mlns="http://www.w3.org/2000/svg" class="boton-edit-info" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                <path d="M9 7h-3a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-3" />
-                <path d="M9 15h3l8.5 -8.5a1.5 1.5 0 0 0 -3 -3l-8.5 8.5v3" />
-                <line x1="16" y1="5" x2="19" y2="8" />
-            </svg>
-           
-            <svg xmlns="http://www.w3.org/2000/svg" class="boton-eliminar-info" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                <rect x="4" y="4" width="16" height="16" rx="2" />
-                <path d="M10 10l4 4m0 -4l-4 4" />
-            </svg>
-        </div>
-    </div>
 </div> -->
 
- <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-<div class="container" id="main-container" >
-    <div class="row">
-        <div *ngFor="let persona of personas" class="col-md-6 col-xl-3" >
-            <div class="card m-b-30">
-                <div class="card-body row">
-                    <div class="col-6"> 
-                        <a href=""><img src={{persona?.urlImagen}} alt="" class="img-fluid rounded-circle w-60"></a>
-                    </div>
-                    <div class="col-6 card-title align-self-center mb-0">
-                        <h5>{{persona?.nombre}} {{persona?.apellido}} </h5>
-                        <p class="m-0"></p>
-                    </div>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item"><i class="fa fa-envelope float-right"></i>{{persona?.correo}} </li>
-                    <li class="list-group-item"><i class="fa fa-phone float-right"></i>Phone : {{persona?.telefono}}  </li>
-                </ul>
-                <div class="card-body">
-                    <ul class="social-links list-inline mb-0">
-                        <li class="list-inline-item"><a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="" data-original-title="Facebook"><i class="fa fa-facebook-f"></i></a></li>
-                        <li class="list-inline-item"><a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="" data-original-title="Twitter"><i class="fa fa-twitter"></i></a></li>
-                        <li class="list-inline-item"><a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="" data-original-title="Skype"><i class="fa fa-skype"></i></a></li>
-                    </ul>
-                    <div class="float-right btn-group btn-group-sm">
-                        <a (click)="onOpenModal(persona, 'edit')" class="btn btn-primary tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Edit"><i class="fa fa-pencil"></i> </a>
-                       <a (click)="onOpenModal(persona, 'delete')"class="btn btn-secondary tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Delete"><i class="fa fa-times"></i></a>                     </div>
-                    
-                </div>
-            </div>
-        </div> 
-    </div>
-</div>  -->
 
     
 <h2>SOBRE MI</h2>
 <div class="header-bar"></div>
 
-        <div class="servicios"> 
+        <div class="servicios" id="sobre-mi"> 
 
             <section class="servicio">
                 
@@ -157,7 +82,7 @@
                     <div class="content">
                         <div>
                             <p class="sobre-mi">{{persona?.sobreMi}}</p>
-                            <div class="float-right btn-group btn-group-sm" id="main-container">
+                            <div class="float-right btn-group btn-group-sm" id="main-container" *ngIf="isAdmin">
                                 <a (click)="onOpenModal(persona, 'edit')" class="btn btn-primary tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Edit"><i class="fa fa-pencil"></i> </a>
                                <!-- <a (click)="onOpenModal(persona, 'delete')"class="btn btn-secondary tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Delete"><i class="fa fa-times"></i></a>                     </div> -->
                             

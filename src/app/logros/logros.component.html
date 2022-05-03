@@ -2,19 +2,38 @@
     <div>{{proyecto.descripcion}}</div>
     </div> -->
 
-    <div  id="pro-container">
-        <button type="button" (click)="onOpenModal(null!,'add')">Agregar exp</button>
-        <div *ngFor="let proyecto of proyectos">
-            <button type="button" (click)="onOpenModal(proyecto, 'delete')">Eliminar exp</button>
-        <button type="button" (click)="onOpenModal(proyecto, 'edit')">Modificar exp</button>
-        <div>{{proyecto.fecha}}</div>
-        <div>{{proyecto.descripcion}}</div>
-        <div>{{proyecto.urlProyecto}}</div>
-        
-    
-        </div>
-        
-    </div>
+
+    <div class="fondo">
+      <div class="fondo" id="proyectos">
+          <div class="contenido" id="pro-container">
+              <div class="proyectostitulo">
+                  <h2 class="proyectos">Proyectos <button (click)="onOpenModal(null!,'add')" type="button" class="botones_contenido" *ngIf="isAdmin">
+                  <i class="fa-solid fa-plus"></i>
+                  </button></h2>
+                  <div class="header-bar"></div>
+              </div>
+              
+              <div class="flex">
+                  <div class="efectohover" *ngFor="let proy of proyectos">
+                      <div class="imagenproyecto">
+                          <div class="imagenabajo">
+                              <a href=# target="_blank"><img src={{proy.urlProyecto}} alt="Fotografía del proyecto"></a> 
+                              
+                              <div class="textoarriba" id="eliminar-editar-proyectos" *ngIf="isAdmin">
+                                  <button (click)="onOpenModal(proy,'edit')" type="button" class="botones_contenido">
+                                  <i class="fa-solid fa-pen"></i>
+                                  </button>
+                                  <button (click)="onOpenModal(proy,'delete')" type="button" class="botones_contenido">
+                                  <i class="fa-solid fa-eraser"></i>
+                                  </button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
     
     <!-- Modal Experiencia Agregar -->
     <div class="modal fade" id="addProyectoModal" tabindex="-1" aria-labelledby="addProyectoModal" aria-hidden="true">

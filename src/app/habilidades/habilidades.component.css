@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#main-container {
+    background-color: #e0c3d5;
+    /* background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.7)), url(../../assets/img/wallpaper.jpg); */
+    background-size: cover;
+    min-width: 100%;
+}
+.contenido {
+    display: grid;
+    row-gap: 1em;
+    width: 100%;
+    height: auto;
+    padding: 30px;
+    
+    
+}
+
+#skills {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 0.8em;
+    font-size: 0.8em;
+    padding: 1em;
+    font-size: 20px;
+}
+
+/* #skills h4 {
+    font-size: 25px;
+    font-weight: bolder;
+    color: black;
+    border-bottom: 1px black solid;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+    justify-self: center;
+    
+} */
+
+h2 {
+
+    margin-top: 4rem;
+    /* margin-bottom: 11rem; */
+    text-align: center;
+    font-family: var(--font-banner);
+    font-weight: 700;
+    font-size: 4rem;
+    text-transform: uppercase;
+   
+}
+
+.header-bar {
+    display: block;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid black;
+     margin-bottom: 2rem; 
+
+}
+
+.botones_contenido {
+    border: none;
+    background: none;
+    padding: 2px;
+}
+
+
+.boton_edicion_texto {
+    padding: 2px 10px;
+    margin-top: 10px;
+    background: #7C3772;
+    color:#f8e6f1;
+    border-radius: 5px;
+    font-size: 10px;
+    border: none;
+    
+    
+}
+
+.close {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: none;
+    background:#f8e6f1;
+    color: #7C3772;
+}
+
+.boton_eliminar {
+    padding: 2px 10px;
+    margin-top: 10px;
+    background: #7C3772;
+    color:#f8e6f1;
+    border-radius: 5px;
+    font-size: 10px;
+    border: none;
+}
+
+.bar {
+    background: #F8E6F1;
+    display: block;
+    height: 10px;
+    /* border: 1px solid rgba(153, 149, 149, 0.3); */
+    /* border-radius: 10px; */
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    text-align: center;
+}
+
+.bar:hover {
+    box-shadow: 0 14px 15px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.bar span {
+    height: 20px;
+    float: left;
+    background: var(--navy);
+}
+
+
+.cajas {
+    /* display: flex;
+    flex-wrap: nowrap; */
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 20px;
+    margin-top: 2rem;
+} 
+
+.hardskills {
+    font-family: Helvetica, sans-serif;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    padding: 5px;
+    width: 100%;
+    height: 100%;
+    flex-wrap: nowrap;
+    line-height: 1px;
+    justify-self: center;
+    
+    
+}
+
+.hardskills h5,
+.softskills h5 {
+    font-size: 1.1em;
+    font-family: Helvetica, sans-serif;
+    text-align: center;
+    margin: 5px;
+}
+
+.hardskills li,
+.softskills li {
+    margin: 7px 0;
+    padding: 5px;
+}
+
+#eliminar-editar-skills,
+#eliminar-editar-trabajos {
+    text-align: end;
+    
+}
+
+i {
+    color: blue;
+    font-size: 1.6rem;
+}
+
+
+
+.skillnombre {
+    font-weight: bolder;
+    color: black;
+    font-size: 17px;
+    margin-bottom: 2rem;
+}
+
+.porc {
+    font-weight: bolder;
+    line-height: 18px;
+    font-size: 15px;
+    color: black;
+
+    
+}
+
+
+.modal-dialog {
+    width: 50%;
+    padding: 15px;
+    justify-content: center;
+    align-self: center;
+    top: 10%;
+    left: 25%;
+}
+
+    
+.modal-body {
+    padding: 10px;
+}
+
+.modal-header button {
+    border: none;
+    background: none;
+    text-align: right;
+    color: blue;
+}
+
+.modal-header h5 {
+    color: black;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.modal-content {
+    padding: 20px;
+    background-color: rgb(248, 245, 247);
+}
+
+.form {
+    line-height: 20px;
+}
+
+.modal-body form label {
+    line-height: 7px;
+    margin-top: 5px;
+    color: #720F64;
+}
+
+.modal-body form input {
+    width: 100%;
+}
+
+#update-skills-modal {
+    padding: 3px 5px;
+    color: #720F64;
+}

@@ -19,6 +19,7 @@ import { LoginComponent } from './seguridad/auth/login.component';
 import { RegistroComponent } from './seguridad/auth/registro.component';
 import { MenuComponent } from './seguridad/menu/menu.component';
 import { IndexComponent } from './seguridad/index/index.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { IndexComponent } from './seguridad/index/index.component';
     LoginComponent,
     RegistroComponent,
     MenuComponent,
-    IndexComponent
+    IndexComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

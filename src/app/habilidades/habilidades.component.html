@@ -1,4 +1,4 @@
-<div  id="hss-container">
+<!-- <div  id="hss-container">
     <button type="button" (click)="onOpenModal(null!,'add')">Agregar skill</button>
     <div *ngFor="let skill of skills">
         <button type="button" (click)="onOpenModal(skill, 'delete')">Eliminar exp</button>
@@ -8,6 +8,30 @@
     <div>{{skill.porcentaje}}</div> 
     </div>
     
+</div> -->
+
+<div class="contenido" id="hss-container">
+    
+  <div id="skills">
+      <h2 class="skills">Habilidades <button (click)="onOpenModal(null!,'add')" type="button" class="botones_contenido" *ngIf="isAdmin">
+          <i class="fa-solid fa-plus"></i></button></h2>
+          <div class="header-bar"></div>
+      <div class="cajas" > 
+          <!-- CAJA1 HARD SKILLS -->
+          <div class="hardskills"*ngFor="let skill of skills">
+              <p class="skillnombre">{{skill.nombreSkill}}</p>
+              <span class="bar"><span [ngStyle]="{'width' : skill.porcentaje + '%' }"></span></span><span class="porc">{{skill.porcentaje}}%</span> 
+              <div id="eliminar-editar-skills" *ngIf="isAdmin" >
+                  <button (click)="onOpenModal(skill,'edit')" type="button" class="botones_contenido"> 
+                      <i class="fa-solid fa-pen"></i>
+                  </button>
+                  <button (click)="onOpenModal(skill,'delete')" type="button" class="botones_contenido">
+                      <i class="fa-solid fa-eraser"></i>
+                  </button>
+              </div>
+          </div>    
+      </div> 
+  </div>
 </div>
 
 <!-- Modal Experiencia Agregar -->
@@ -98,7 +122,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="deleteModalLabel">Eliminar Experiencia</h5>
-          <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden= "true">&times; </span>    
           </button>
         </div>
@@ -106,7 +130,7 @@
           <p>¿Estás seguro de eliminar experiencia?</p>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
           <button (click)="onDeleteSkill(deleteSkill!.id)" type="button" class="btn btn-danger" data-dismiss="modal">Si</button>
         </div>
       </div>

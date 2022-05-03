@@ -2,35 +2,11 @@ a {
     text-decoration: none;
 }
 
-/* .header {
-    background-color:#00358e;
-    height: 5rem;
-    position: relative;
-    
-}
-
-.header-logo {
-    display: flex;
-    align-items: center;
-    font-family: var(--fuenteHeading);
-    color: white;
-} */
 
 .logo-nombre {
     font-size: 2.5rem;
     margin: 0;
 }
-
-/* .header .logo-login {
-    color: white;
-    text-transform: uppercase;
-    font-family: var(--fuenteHeading);
-    position: absolute;
-    right: 0;
-    top: 0;
-    margin-right: 0.5rem;
-    margin-top: 0.5rem;
-} */
     
 
 

@@ -1,0 +1,49 @@
+body{
+    margin: 0;  
+    padding: 0;
+}
+
+.inner-footer {
+    margin: 0;
+    padding: 0;
+    background-color: #272727;
+}
+
+.social-links{
+    display: flex;
+      
+}
+
+.social-links ul {
+    padding: 1rem;
+    display: flex;
+    width: 30rem;
+    height: 7rem;
+    margin: auto;
+}
+
+.social-items {
+    list-style: none;
+}
+
+.social-items a {
+    padding: 1rem 2rem;
+    font-size: 3.5rem;
+    color: #6cccc6;
+    transition: all .25s;
+    
+}
+
+.social-items a:hover {
+    color: #54a39e;
+}
+
+.outer-footer {
+    padding: 1.5rem;
+    text-align: center;
+    color: white;
+    font-size: 1.8rem;
+    background-color: #3f3f3f;
+    font-family: var(--font-banner);
+}
+

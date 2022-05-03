@@ -32,11 +32,16 @@ html {
     -sizing: content-box;
 }
 
-/* html {    
-    font-size: 1.2rem;
-    
-    
-}  */
+h2 {
+
+    margin-top: 4rem;
+    /* margin-bottom: 11rem; */
+    text-align: center;
+    font-family: var(--font-banner);
+    font-weight: 700;
+    font-size: 4rem;
+   
+}
 
 img {
     max-width: 100%;
@@ -119,11 +124,6 @@ h3 {
 }
 
 
-footer {
-    background-color: #00358e;
-    display: flex;
-    justify-content: space-between;
-}
 
 
 
