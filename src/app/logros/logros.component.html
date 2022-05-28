@@ -19,6 +19,11 @@
                           <div class="imagenabajo">
                               <a href=# target="_blank"><img src={{proy.urlProyecto}} alt="Fotografía del proyecto"></a> 
                               
+                            <div class="overlay">
+                              <div class="text">{{proy.descripcion}} <br> {{proy.fecha}}</div>
+                              
+                            </div>
+
                               <div class="textoarriba" id="eliminar-editar-proyectos" *ngIf="isAdmin">
                                   <button (click)="onOpenModal(proy,'edit')" type="button" class="botones_contenido">
                                   <i class="fa-solid fa-pen"></i>

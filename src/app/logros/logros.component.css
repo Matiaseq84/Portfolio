@@ -77,8 +77,12 @@ h2 {
 .imagenproyecto {
     max-width: 100%;
     max-height: 100%;
+    
 }
 
+.imagenabajo {
+    position: relative;
+}
 
 .imagenproyecto img {
     width: 25rem;
@@ -87,9 +91,35 @@ h2 {
     transition:0.5s;
 }
 
-.imagenproyecto img:hover {
-    transition: 0.5s;
-    opacity: 50%;
+.imagenproyecto:hover .overlay {
+    /* transition: 0.5s; */
+    opacity: 85%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5 ease;
+    background-color: white;
+}
+
+.text {
+    color: black;
+    font-weight: bold;
+    font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 #eliminar-editar-proyectos {
